@@ -28,7 +28,6 @@ This workshop provides an introduction to Git, Python, Ansible and REST API. Any
 6. API
 7. Putting it together
 
-
 ## Preparation
 
 1. IDE  
