@@ -1,0 +1,18 @@
+{
+  "contents": [
+    "this is a list",
+    "with",
+    5,
+    "items",
+    {
+      "includingthisdict1": {
+        "dictionary2": [
+          {
+            "listitem": ["note the following comma"]
+          }
+        ],
+        "dictionary3": "value"
+      }
+    }
+  ]
+}

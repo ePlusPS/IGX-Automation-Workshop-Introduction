@@ -1,0 +1,8 @@
+---
+- name: Debug all Vars
+  hosts: all
+  connection: local
+  gather_facts: no
+  tasks:
+  - debug:
+    var: hostvars

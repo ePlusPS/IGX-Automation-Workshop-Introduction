@@ -1,0 +1,22 @@
+# Test file for URI module and conditionals
+
+- name: admin check
+  hosts: local
+  connection: local
+  gather_facts: False
+
+  tasks:
+  - name: Post a message to slack
+    uri:
+      url: https://www.google.com
+      method: GET
+      return_content: yes
+    register: result
+
+  - name: Show output with debug
+    debug:
+      var: result
+
+  - name: Show content with debug
+    debug:
+      var: result.content

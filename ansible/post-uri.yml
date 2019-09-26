@@ -1,0 +1,25 @@
+# Test file for URI module and conditionals
+- name: admin check
+  hosts: local
+  connection: local
+  gather_facts: False
+
+  tasks:
+  - name: Post a message to slack
+    uri:
+      url: https://hooks.slack.com/services/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
+      method: POST
+      headers:
+        Content-Type: "application/json"
+        body_format: json
+      body: '{"text":"Hello world!"}'
+      return_content: yes
+    register: result
+
+  - name: Show output with debug
+    debug:
+      var: result
+
+  - name: Show content with debug
+    debug:
+      var: result.content
