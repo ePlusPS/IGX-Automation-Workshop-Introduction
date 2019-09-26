@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from pandriver import *
+from pandevice import *
 from getpass import getpass
 import sys
 
