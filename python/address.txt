@@ -1,0 +1,4 @@
+dc1,domain controller 1,172.16.1.1,server,dc,prod
+dc2,domain controller 2,172.16.1.2,server,dc,prod
+ntp1,ntp server 1,172.16.1.3,server,ntp,prod
+ntp2,ntp server 2,172.16.1.4,server,ntp,prod

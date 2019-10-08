@@ -6,7 +6,7 @@
   gather_facts: False
 
   tasks:
-  - name: Post a message to slack
+  - name: Get google page
     uri:
       url: https://www.google.com
       method: GET
