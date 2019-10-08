@@ -124,20 +124,23 @@ def get_addresses(apikey):
         json_data = response.json()
 
         # find the address entries and add to a list
-        address_list = json_data['result']['entry']
+        try:
+            address_list = json_data['result']['entry']
 
-        # count the number of address entries
-        address_count = int(json_data['result']['@count'])
-        print(f'\nConnection success. {str(address_count)} entries found')
+            # count the number of address entries
+            address_count = int(json_data['result']['@count'])
+            print(f'\nConnection success. {str(address_count)} entries found')
 
-        # loop through the addresses
-        for address in address_list:
-            try:
-                desc = address["description"]
-            except:
-                desc = 'No description found'
-            print(f'\n{address["@name"]} {address["ip-netmask"]}' \
-            f' {desc}')
+            # loop through the addresses
+            for address in address_list:
+                try:
+                    desc = address["description"]
+                except:
+                    desc = 'No description found'
+                print(f'\n{address["@name"]} {address["ip-netmask"]}' \
+                f' {desc}')
+        except:
+            print('No addresses found on firewall')
 
     # notify is the request did not response with 200
     else:
