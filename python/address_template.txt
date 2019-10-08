@@ -1,0 +1,10 @@
+# This is a template for for the bulk address add script
+
+# This is the required format using commas as separation. Tags are optional.
+
+# Remove all lines apart from the actual entries required.
+
+name,description with spaces,ip-netmask,tags,tags 
+dc1,Domain Controller,172.16.1.1,dc,server
+dc2,Domain Controller,172.16.1.2/32,dc
+servers,Server range,172.16.1.0/24,server
