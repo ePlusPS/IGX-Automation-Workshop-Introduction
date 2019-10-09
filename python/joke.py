@@ -9,8 +9,9 @@ def telljoke():
         }
     response = requests.request("GET", url, headers=headers)
     json_response = response.json()
+    print(f'Request Response {json_response["status"]}')
     print(json_response["joke"])
-    print(json_response["id"])
+
 
 if __name__ == "__main__":
     telljoke()
