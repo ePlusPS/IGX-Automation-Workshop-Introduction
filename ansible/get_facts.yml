@@ -1,0 +1,44 @@
+# headline for the playbook
+- name: admin check
+  hosts: panorama
+  connection: local
+  gather_facts: False
+
+  roles:
+    - role: PaloAltoNetworks.paloaltonetworks
+
+# Declare the tasks to run in the playbook
+  tasks:
+  - name: get credentials
+    include_vars: 'credentials.yml'
+    no_log: 'no'
+
+  - name: Print crednetials results
+    debug:
+      msg: "The IP address is {{ provider.ip_address }}"
+
+  - name: Check Firewall is Ready for Config
+    panos_check:
+      provider: '{{ provider }}'
+      initial_delay: 5
+      interval: 5
+      timeout: 60
+    register: result
+
+  - name: Print check results
+    debug:
+      var: result
+
+  - name: Get Firewall Facts and save to file
+    panos_facts:
+      provider: '{{ provider }}'
+    register: facts
+
+  - name: Print facts
+    debug:
+      var: facts
+
+  - name: Copy using inline content
+    copy:
+      content: "{{ facts }}"
+      dest: "firewall_facts/{{ lookup('pipe','date +%Y-%m-%d-%H-%M-%S') }}_{{provider.ip_address}}.log"
