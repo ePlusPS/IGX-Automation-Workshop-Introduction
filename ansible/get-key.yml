@@ -13,11 +13,6 @@
       return_content: yes
       validate_certs: no
     register: result
-
-  - name: Show output with debug
-    debug:
-      var: result
-
-  - name: Show content with debug
+- name: Show content with debug
     debug:
       var: result.content
