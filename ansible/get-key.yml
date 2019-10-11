@@ -1,0 +1,23 @@
+# Test file for URI module and conditionals
+
+- name: admin check
+  hosts: local
+  connection: local
+  gather_facts: False
+
+  tasks:
+  - name: Update this
+    uri:
+      url: update this
+      method: GET
+      return_content: yes
+      validate_certs: no
+    register: result
+
+  - name: Show output with debug
+    debug:
+      var: result
+
+  - name: Show content with debug
+    debug:
+      var: result.content
