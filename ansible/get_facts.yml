@@ -17,7 +17,7 @@
     debug:
       msg: "The IP address is {{ provider.ip_address }}"
 
-    - name: Get Firewall Facts and save to file
+  - name: Get Firewall Facts and save to file
     panos_facts:
       provider: '{{ provider }}'
     register: facts
