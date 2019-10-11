@@ -13,18 +13,18 @@
     include_vars: 'credentials.yml'
     no_log: 'no'
 
-  - name: Print crednetials results
-    debug:
-      msg: "The IP address is {{ provider.ip_address }}"
+#  - name: Print credentials results
+#    debug:
+#      msg: "The IP address is {{ provider.ip_address }}"
 
   - name: Get Firewall Facts and save to file
     panos_facts:
       provider: '{{ provider }}'
     register: facts
 
-  - name: Print facts
-    debug:
-      var: facts
+#  - name: Print facts
+#    debug:
+#      var: facts
 
   - name: Copy using inline content
     copy:
