@@ -19,19 +19,17 @@ apikey = creds.apikey
 
 # check we have the hostname and credentials
 def get_creds():
-
     # set the variables to global so we adjust the globals
     global hostname
     global username
     global password
-
     # gather the hostname and credentials if they were not set
     if not bool(hostname):
-        hostname = input('Enter the hostname')
+        hostname = input('Enter the hostname: ')
     if not bool(username):
-        username = input('Enter the API username')
+        username = input('Enter the API username: ')
     if not bool(password):
-        password = getpass.getpass('Enter the password')
+        password = getpass.getpass('Enter the password: ')
     return
 
 

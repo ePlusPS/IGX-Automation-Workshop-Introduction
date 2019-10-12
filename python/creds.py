@@ -1,5 +1,5 @@
 # you can leave these blank because we will check for them
-hostname = ''
-username = ''
-password = ''
+hostname = 'aws1.willembrey.com'
+username = 'apiuser'
+password = 'apiuser'
 apikey = ''
