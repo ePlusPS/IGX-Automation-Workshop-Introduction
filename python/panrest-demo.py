@@ -8,13 +8,13 @@ import sys
 import os
 import getpass
 import time
+import creds
 
 # set global variables
-# you can leave these blank because we will check for them
-hostname = '3.218.191.224'
-username = 'apiuser'
-password = 'apiuser'
-apikey = ''
+hostname = creds.hostname
+username = creds.username
+password = creds.password
+apikey = creds.apikey
 
 
 # check we have the hostname and credentials
@@ -60,17 +60,16 @@ def get_inputfile():
         f' as the zone file.')
     return inputfile
 
+# Load the address file
 def get_newaddresses(inputfile):
-
-    # Check if zone conversion file was added and load it
+    # check filename is not empty
     if bool(inputfile):
         try:
-            f = open(inputfile, 'r')
-            addressdata = f.read()
-            addresslist = addressdata.split('\n')
-            print(f'\n{len(addresslist)} lines read from file: ' \
-            f'{inputfile}')
-            f.close()
+            with open(inputfile, 'r') as f:
+                addressdata = f.read()
+                addresslist = addressdata.split('\n')
+                print(f'\n{len(addresslist)} lines read from file: ' \
+                f'{inputfile}')
         except Exception as e:
             print(f'\nFile open of {inputfile} failed with error:\n{e}')
             sys.exit()
