@@ -1,3 +1,4 @@
 config.py
 .rest
 *.txt
+creds.py
