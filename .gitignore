@@ -1,5 +1,4 @@
 config.py
 .rest
-*.txt
-python/creds.py
+test.txt
 creds.py

@@ -1,15 +1,24 @@
 #!/usr/bin/env python
 
-from pandevice import *
+import pandevice
+from pandevice import firewall
 from getpass import getpass
 import sys
 
 hostname = input("Device hostname: ")
 username = input("Device username: ")
-password = getpass("Device password: ")
+# this should be getpass but it doesnt work on Windows
+password = input("Device password: ")
+# Non Windows alternative
+#password = getpass("Device password: ")
 
-try:
-    fw = pandevice.firewall.Firewall(hostname, username, password)
-    print(f'Firewall system info: {pano.refresh_system_info()}\n')
-except:
-    print('Failed to connect to Firewall')
+def fw_connect(hostname,username,password):
+    try:
+        fw= pandevice.firewall.Firewall(hostname, username, password)
+        info = fw.refresh_system_info()
+        print(f'Firewall system info: {info}\n')
+    except Exception as e:
+        print(e)
+
+if __name__ == "__main__":
+    fw_connect(hostname,username,password)
