@@ -5,7 +5,7 @@
   - sub-item
 - dictionarykey1: item1
   dictionarykey1: item2
-  dictionarykey3: item3
-  - subdict:
-    subsubdict: value
+  dictionarykey3:
+    - subdict:
+        subsubdict: value
 -
