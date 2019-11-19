@@ -10,23 +10,22 @@ This workshop provides an introduction to Git, Python, Ansible and REST API. Any
 2. Python 2.x and 3.x
 3. Bash shell (Git bash on Windows)
 4. Atom IDE
-5. Jupyter lab
-6. Slack
-7. Postman API client    
-8. Ansible  
-9. AWS Linux instances
-10. Virtual network devices
+5. Slack
+6. Postman API client    
+7. Ansible  
+8. AWS Linux instances
+9. Virtual network devices
 
 
 ## Agenda
 
 1. Check of client workstation setup
 2. Access slack channel and AWS instances
-3. Python introduction
-4. Data types and format refresher (lists, dictionaries, YAML and JSON)
-5. Ansible
-6. API
-7. Putting it together
+3. Workflow
+4. Source Control
+5. API
+6. Python
+7. Ansible
 
 ## Preparation
 
@@ -42,8 +41,3 @@ This workshop provides an introduction to Git, Python, Ansible and REST API. Any
 
 4. Slack  
    You should get an invite to join the slack channel for the workshop. This can be done on the day if you don't get the invite beforehand. You can install the desktop app from [here](https://slack.com/intl/en-gb/downloads).
-
-5. Python, Git etc.  
-   These are OS specific to select the link and follow the instructions  
-   * [Windows Setup](https://github.com/ePlusPS/IGX-automation-workshop-foundation/blob/master/Windows-setup.md)  
-   * [Mac Setup](https://github.com/ePlusPS/IGX-automation-workshop-foundation/blob/master/Mac-setup.md)  
