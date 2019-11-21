@@ -41,3 +41,5 @@ This workshop provides an introduction to Git, Python, Ansible and REST API. Any
 
 4. Slack  
    You should get an invite to join the slack channel for the workshop. This can be done on the day if you don't get the invite beforehand. You can install the desktop app from [here](https://slack.com/intl/en-gb/downloads).
+
+21-11-19

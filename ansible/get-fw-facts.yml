@@ -19,7 +19,7 @@
 
   - name: Get Firewall Facts and save to file
     panos_facts:
-      provider: '{{ provider }}'
+      provider: '{{ fw_creds }}'
     register: facts
 
 #  - name: Print facts
