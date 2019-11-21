@@ -1,6 +1,6 @@
 # headline for the playbook
 - name: admin check
-  hosts: localhost
+  hosts: firewalls
   connection: local
   gather_facts: False
 
