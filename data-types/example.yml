@@ -4,7 +4,7 @@
 - another item
   - sub-item
 - dictionarykey1: item1
-  dictionarykey1: item2
+  dictionarykey2: item2
   dictionarykey3:
     - subdict:
         subsubdict: value
